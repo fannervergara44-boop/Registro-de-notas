@@ -1,0 +1,147 @@
+/* Importamos una fuente limpia y moderna para darle un buen look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    /* Definimos variables de color para fácil mantenimiento */
+    --primary-color: #3b82f6; /* Azul brillante */
+    --secondary-color: #1e40af; /* Azul oscuro */
+    --background-light: #f3f4f6; /* Gris muy claro */
+    --text-color: #1f2937; /* Gris oscuro para el texto */
+    --shadow-main: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 100vh; /* Ocupa al menos el alto de la pantalla */
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal de secciones */
+main {
+    width: 90%;
+    max-width: 700px; /* Limita el ancho en pantallas grandes */
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Estilo para las secciones de contenido (formulario y lista) */
+#form-section, #list-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-main);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+#nota-form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: var(--primary-color);
+    outline: none; /* Quita el borde de enfoque por defecto del navegador */
+}
+
+/* Estilo para el botón (RNF04: Retroalimentación del Botón) */
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98); /* Efecto de presionado */
+}
+
+/* Estilos para la lista de notas */
+#lista-notas {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+#lista-notas li {
+    background-color: var(--background-light);
+    border: 1px solid #e5e7eb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+/* Estilo para el indicador de la nota */
+.nota-valor {
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+
+/* Footer (Pie de página) */
+footer {
+    margin-top: auto; /* Empuja el footer hacia el final de la página */
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #cbd5e1;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}

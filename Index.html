@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Toma de Notas</title>
+    <link rel="stylesheet" href="estiloBeta.css">
+</head>
+<body>
+    <header>
+        <h1>✍️ Sistema de Captura de Notas de Usuarios</h1>
+    </header>
+    
+    <main>
+        <section id="form-section">
+            <h2>Ingresar Nueva Nota</h2>
+            <form id="nota-form">
+                <div>
+                    <label for="documento">Documento (TI/CC):</label>
+                    <input type="text" id="documento" required>
+                </div>
+
+                <div>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" required aria-required oninput="this"> 
+                </div>
+
+                <div>
+                    <label for="nota">Nota (0.0 a 5.0):</label>
+                    <input type="number" id="nota" step="0.1" min="0.0" max="5.0" required>
+                </div>
+
+                <button type="submit">Guardar Nota</button>
+            </form>
+        </section>
+
+        <section id="list-section">
+            <h2>Notas Capturadas</h2>
+            <ul id="lista-notas">
+                </ul>
+        </section>
+    </main>
+
+    <script src="prose.js"></script>
+</body>
+</html>
